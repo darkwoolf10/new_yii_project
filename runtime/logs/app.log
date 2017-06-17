@@ -62,3 +62,1962 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1497711193.638
     'REQUEST_TIME' => 1497711193
 ]
+2017-06-17 15:53:28 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 15:53:28 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'D_0-TLzPASzczMskW7WBo8dIfQy4SqVlH7ow3BkcoXbdlisED-98hEhfuSRBo5P9Fxx3vv5qxrDdk7Qrm3Aoug=='
+    'Posts' => [
+        'title' => 'first post'
+        'text' => 'more-more text'
+        'text_preview' => 'text'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '230'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497714808.395
+    'REQUEST_TIME' => 1497714808
+]
+2017-06-17 15:55:00 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 15:55:00 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'm_3zu_YBShxZ_6awnQl0MY3fat_GUm67qX_gTTjKYMZJlubzRSE3tM1s1LCHH2ZvXYtgbYByDW5rVmS6uqbpCg=='
+    'Posts' => [
+        'title' => 'post'
+        'text' => 'more-more text'
+        'text_preview' => 'text'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '224'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55360'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497714900.469
+    'REQUEST_TIME' => 1497714900
+]
+2017-06-17 15:56:16 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 15:56:16 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'eRhxxIiMFLufqKhIJBPgIsf8ATbjzDGZpM9DMkIpr7yrc2SMO6xpEws72kg-BfJ8F6gLhKXsUkxm5sfFwEUmcA=='
+    'Posts' => [
+        'title' => 'sdfsdjf'
+        'text' => 'jdhfkjhkj'
+        'text_preview' => 'kjlkjkhkj'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '227'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55374'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497714976.058
+    'REQUEST_TIME' => 1497714976
+]
+2017-06-17 15:58:19 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 15:58:19 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'alZ5Zd6W2Z8VtF2dlDenRV76RJ4RPxxaW6qTOmTCEXK4PWwtbbakN4EnL52OIbUbjq5OLFcff4-ZgxfN5q6Yvg=='
+    'Posts' => [
+        'title' => 'sdfjds'
+        'text' => 'jdshfkjds'
+        'text_preview' => 'kjdsfhoisdj'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55398'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715099.1
+    'REQUEST_TIME' => 1497715099
+]
+2017-06-17 16:02:37 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:02:37 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'MGAa9Y_R-53ed_S3J54oOGGqdVBaNyrTfJIbxpFFxZDiCw-9PPGGNUrkhrc9iDpmsf5_4hwXSQa-u58xEylMXA=='
+    'Posts' => [
+        'title' => 'dfjsdpfkd'
+        'text' => 'dfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkd'
+        'text_preview' => 'dfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkd'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '310'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55420'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715357.358
+    'REQUEST_TIME' => 1497715357
+]
+2017-06-17 16:03:20 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:03:20 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'Xex2O0Q5X1oUUZlxK6bhKI6QCu28whvg-UcwTuUFudiPh2Nz9xki8oDC63ExsPN2XsQAX_rieDU7brS5Z2kwFA=='
+    'Posts' => [
+        'title' => 'dfjsdpfkd'
+        'text' => 'dfjsdpfkddfjsdpfkddfjsdpfkddfjsdpfkd'
+        'text_preview' => 'dfjsdpfkddfjsdpfkddfjsdpfkdv'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '291'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715400.105
+    'REQUEST_TIME' => 1497715400
+]
+2017-06-17 16:07:04 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:07:04 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'CLHMgkuiNFB6SOH_biSirbfhO4RHVJcBqj30nZ_lF3za2tnK-IJJ-O7bk_90MrDzZ7UxNgF09NRoFHBqHYmesA=='
+    'Posts' => [
+        'title' => 'dsiofjoidsjf'
+        'text' => 'dsiofjoidsjfdsiofjoidsjfdsiofjoidsjf'
+        'text_preview' => 'dsiofjoidsjfdsiofjoidsjfdsiofjoidsjfdsiofjoidsjfdsiofjoidsjf'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '326'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55508'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715624.597
+    'REQUEST_TIME' => 1497715624
+]
+2017-06-17 16:09:47 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:09:47 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'eKc7ITKY0JjRli-HwQAjLiOJdeBi4FKF_TPteRpVLc6qzC5pgbitMEUFXYfbFjFw891_UiTAMVA_GmmOmDmkAg=='
+    'Posts' => [
+        'title' => 'dofjpdso'
+        'text' => 'dkfjdsfm'
+        'text_preview' => 'lkdsnfdsjf'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '244'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715787.74
+    'REQUEST_TIME' => 1497715787
+]
+2017-06-17 16:10:36 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:10:36 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'hG-0k5WibCXcISaxTtxkLsj1lCes3iAEgG3U8R5hvSlWBKHbJoIRjUiyVLFUynZwGKGeler-Q9FCRFAGnA005Q=='
+    'Posts' => [
+        'title' => 'dsfjpdsofm'
+        'text' => 'ldifjposdkfp'
+        'text_preview' => 'lidjfpodsk'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '250'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497715836.328
+    'REQUEST_TIME' => 1497715836
+]
+2017-06-17 16:13:20 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:13:20 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'DSTk9aWr_22Vt_NmFLRyF_NNksl_c70oUGgzlJOf7MDfT_G9FouCxQEkgWYOomBJIxmYezlT3v2SQbdjEfNlDA=='
+    'Posts' => [
+        'title' => 'dskjfhkdjsfb'
+        'text' => 'kjdfhoisdjf'
+        'text_preview' => 'kdjfhoidsjf'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '252'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497716000.598
+    'REQUEST_TIME' => 1497716000
+]
+2017-06-17 16:13:40 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:13:40 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'M6LdE7IVXTVmsRkSWDeI4Fo5RA-mDOAuAqKihYBS9w_hychbATUgnfIiaxJCIZq-im1OveAsg_vAiyZyAj5-ww=='
+    'Posts' => [
+        'title' => 'kdsjfoids'
+        'text' => 'lkdfjposdkjf'
+        'text_preview' => 'lisdjfposdj'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '250'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55568'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497716020.005
+    'REQUEST_TIME' => 1497716020
+]
+2017-06-17 16:28:02 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:28:02 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '-oGR1zJetHcX69KpChM0au6fzNXkszvJ3IuNCi36aj8o6oSfgX7J34N4oKkQBSY0PsvGZ6KTWBweogn9r5bj8w=='
+    'Posts' => [
+        'title' => 'srsdiofjo'
+        'text' => 'srsdiofjosrsdiofjo'
+        'text_preview' => 'srsdiofjosrsdiofjo'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '263'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55840'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497716882.198
+    'REQUEST_TIME' => 1497716882
+]
+2017-06-17 16:34:48 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:34:48 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '_eN3XJcmsGtAgp5PilIZV14-V9dkBJLH9Q6aPk30AKIviGIUJAbNw9QR7E-QRAsJjmpdZSIk8RI3Jx7Jz5iJbg=='
+    'Posts' => [
+        'title' => 'joijoi'
+        'text' => 'ojoijoi'
+        'text_preview' => 'pojoij'
+        'img' => 'download.jpg'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '221'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497717288.438
+    'REQUEST_TIME' => 1497717288
+]
+2017-06-17 16:53:56 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:65
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 65, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 16:53:56 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '6fOu89rbmUSFTObV7Bzp7nuHlf7zzKVClaYocb9eEXo7mLu7afvk7BHflNX2Cvuwq9OfTLXsxpdXj6yGPTKYtg=='
+    'Posts' => [
+        'title' => 'mnbijoi'
+        'text' => 'kjbuh'
+        'text_preview' => 'jjoij'
+        'img' => ''
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '207'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56236'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497718436.637
+    'REQUEST_TIME' => 1497718436
+]
+2017-06-17 17:06:02 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:06:02 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'KUkNfpHu2v5aiSpcKE-4T16dZgEjYXffd8KecOvE6-v7Ihg2Is6nVs4aWFwyWaoRjslss2VBFAq16xqHaahiJw=='
+    'Posts' => [
+        'title' => 'kdsjfpodskpo'
+        'text' => 'oekfpodsj'
+        'text_preview' => 'idjfpodjfoisdj'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '253'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56372'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719162.409
+    'REQUEST_TIME' => 1497719162
+]
+2017-06-17 17:06:57 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:06:57 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '3w8a3Wn6ZXvjxkS0QxzXcsDtiVTjFBmEtTFq90AqvwoNZA-V2toY03dVNrRZCsUsELmD5qU0elF3GO4AwkY2xg=='
+    'Posts' => [
+        'title' => 'jdspofjdso'
+        'text' => 'podjfoidsj'
+        'text_preview' => 'iodsjfoidsj'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '249'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56396'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719217.794
+    'REQUEST_TIME' => 1497719217
+]
+2017-06-17 17:07:53 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:07:53 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'fqv5mM6vvaovlRyvIb6Bu-HSp-fKNf3Mw0SSf9tZiyCswOzQfY_AArsGbq87qJPlMYatVYwVnhkBbRaIWTUC7A=='
+    'Posts' => [
+        'title' => 'nisdfjdsoi'
+        'text' => 'ojdfoidsj'
+        'text_preview' => 'dsjfiosdj'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '246'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56402'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719273.828
+    'REQUEST_TIME' => 1497719273
+]
+2017-06-17 17:08:38 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:08:38 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '3Rcvbz57RXsYRnw5-bLn8k3NmrggyPj0bx6OVtGHBtoPfDonjVs404zVDjnjpPWsnZmQCmbomyGtNwqhU-uPFg=='
+    'Posts' => [
+        'title' => 'dfpodsk'
+        'text' => 'opdsjfpodsj'
+        'text_preview' => 'iodsjfpsdj'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '246'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56414'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719318.866
+    'REQUEST_TIME' => 1497719318
+]
+2017-06-17 17:11:57 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][Error] Error: Call to a member function saveAs() on null in /var/www/html/basic/modules/blog/models/Posts.php:67
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#3 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2017-06-17 17:11:57 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'WHCE_34fQ-yDn4noDXVJ6oGBsycS1KQ6bE1wnPbz_LKKG5G3zT8-RBcM--gXY1u0UdW5lVT0x--uZPRrdJ91fg=='
+    'Posts' => [
+        'title' => 'Ð²Ð»Ñ‹Ð»Ð°Ð·Ñ…Ñ‹Ð²Ð»'
+        'text' => 'Ð´Ñ‹Ð²ÑˆÐ¾Ð°Ð·Ñ‰Ñ‹Ð²'
+        'text_preview' => 'Ð²Ñ‹Ð¾Ð°Ð·Ñ‰Ñ‹Ð²'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '386'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56446'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719517.957
+    'REQUEST_TIME' => 1497719517
+]
+2017-06-17 17:12:45 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][Error] Error: Call to a member function saveAs() on null in /var/www/html/basic/modules/blog/models/Posts.php:67
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#3 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2017-06-17 17:12:45 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'AuKDwkcHoe2Eut5WSnsMwVebqGDmkitbX9zE43gXqFTQiZaK9CfcRRAprFZQbR6fh8-i0qCySI6d9UAU-nshmA=='
+    'Posts' => [
+        'title' => 'Ð²ÑŒÐ°Ð¶Ð´Ñ‹'
+        'text' => 'kldsfn'
+        'text_preview' => 'dksfmpds'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '268'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719565.896
+    'REQUEST_TIME' => 1497719565
+]
+2017-06-17 17:13:27 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:13:27 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'Qe1wx72aKn2-lTBVF4L6Hz5GUaLqh3lK1EuHHnGSqz-ThmWPDrpX1SoGQlUNlOhB7hJbEKynGp8WYgPp8_4i8w=='
+    'Posts' => [
+        'title' => 'dsfkopdsk'
+        'text' => 'dpfksp'
+        'text_preview' => 'opsdfkp'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '240'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56490'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719607.182
+    'REQUEST_TIME' => 1497719607
+]
+2017-06-17 17:13:48 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/basic/modules/blog/models/Posts.php:66
+Stack trace:
+#0 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 66, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#4 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2017-06-17 17:13:48 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'Qk_LBZDGIsmlOi_GHhZioNFj8iV4jha9gaNn7Cm5RL-QJN5NI-ZfYTGpXcYEAHD-ATf4lz6udWhDiuMbq9XNcw=='
+    'Posts' => [
+        'title' => 'kdjfposdj'
+        'text' => 'dfjpodsfm'
+        'text_preview' => 'djsfposd'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '244'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56496'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719628.163
+    'REQUEST_TIME' => 1497719628
+]
+2017-06-17 17:14:08 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][error][Error] Error: Call to a member function saveAs() on null in /var/www/html/basic/modules/blog/models/Posts.php:67
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#3 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2017-06-17 17:14:08 [127.0.0.1][100][aaomrirvbknj2bh65ifprkgo07][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => 'q6eJ-jvfxsLT7Vm-D5X2D8ii4DhYF5xTlNLdwtMoRQZ5zJyyiP-7akd-K74Vg-RRGPbqih43_4ZW-1k1UUTMyg=='
+    'Posts' => [
+        'title' => ';dosjfposd'
+        'text' => 'ldijfposdjf'
+        'text_preview' => 'kjfposdkf'
+        'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÒkH³ }¨”“r\0^ÐT
+²F cÕÂ)„÷‚l‰Ì\";}'
+    'PHPSESSID' => 'aaomrirvbknj2bh65ifprkgo07'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=1'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=1875e134fefb4577611b744578275d1d69347385fbb29186dcd45edb5b718586a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%D2k%15H%B3+%7D%A8%94%93r%00%1A%16%12%5E%D0T%0A%B2F+c%D5%C2%29%84%F7%82l%89%CC%22%3B%7D; PHPSESSID=aaomrirvbknj2bh65ifprkgo07; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '250'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '56504'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497719648.892
+    'REQUEST_TIME' => 1497719648
+]
+2017-06-17 21:48:25 [127.0.0.1][100][ai7t1tplh13fkqk19bqeoq63u1][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(static/images/img5945a3a91.png): failed to open stream: Permission denied in /var/www/html/basic/vendor/yiisoft/yii2/web/UploadedFile.php:163
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/var/www/html/b...', 163, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/web/UploadedFile.php(163): move_uploaded_file('/tmp/phpeIbTXq', 'static/images/i...')
+#2 /var/www/html/basic/modules/blog/models/Posts.php(66): yii\web\UploadedFile->saveAs('static/images/i...')
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(490): app\modules\blog\models\Posts->beforeSave(true)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/basic/modules/blog/controllers/DefaultController.php(80): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#12 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2017-06-17 21:48:25 [127.0.0.1][100][ai7t1tplh13fkqk19bqeoq63u1][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_POST = [
+    '_csrf' => '-NtzRGIcr4IttyE4FRkfU8r0wGWteDEV1MY_kGKavtroB63Aslx873V-HTdIBlZftB3P-8J0z0TtH6SgiEN15w=='
+    'Posts' => [
+        'title' => 'Ð²Ð»Ð°Ð·Ñ‰Ñ‹Ð²'
+        'text' => 'Ð²Ñ‹Ð¾Ð°Ñ‰Ð²ÑˆÑ‹'
+        'text_preview' => 'Ð²ÑˆÑ‹Ð¾Ð°Ñ‰Ñ‹Ð²Ñˆ'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => '1-eKQYIK3A-JAtL-gEewZoNQ.png'
+        ]
+        'type' => [
+            'img' => 'image/png'
+        ]
+        'tmp_name' => [
+            'img' => '/tmp/phpeIbTXq'
+        ]
+        'error' => [
+            'img' => 0
+        ]
+        'size' => [
+            'img' => 621961
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ÜÞ„Ð@ÓmXÉ<]I~éžoþQ9Ù›0êÙË=\";}'
+    'PHPSESSID' => 'ai7t1tplh13fkqk19bqeoq63u1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'HTTP_COOKIE' => '_identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%10%DC%DE%84%D0%40%D3mX%C9%3C%0F%5D%1FI%0C%7E%E9%0F%9Eo%0C%FEQ9%D9%9B0%EA%D9%CB%3D%22%3B%7D; PHPSESSID=ai7t1tplh13fkqk19bqeoq63u1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------1714657251556197411271314129'
+    'CONTENT_LENGTH' => '622915'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '55534'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497736105.102
+    'REQUEST_TIME' => 1497736105
+]
