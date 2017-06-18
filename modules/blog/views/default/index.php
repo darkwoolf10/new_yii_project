@@ -18,19 +18,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Posts', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'title',
-            'text:ntext',
-            'text_preview',
-            'img',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    <div class="row">
+    <?php foreach ($posts as $arr) { ?>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="<?= "/basic/web" . $arr->img ?>" alt="<?= $arr->title ?>">
+                    <div class="caption">
+                        <h3><?= $arr->title ?></h3>
+                        <p><a href="?r=blog/default/view&id=<?=$arr->id ?>" class="btn btn-primary" role="button">Read</a> <a href="<?=$arr->text_preview?>" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+    <?php } ?>
+    </div>
 </div>
