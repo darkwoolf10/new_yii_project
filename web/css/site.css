@@ -8,6 +8,9 @@ body {
 img {
     max-width: 100%;
 }
+.sails {
+    font-family: "MONOSPACE";
+}
 .wrap {
     min-height: 100%;
     height: auto;

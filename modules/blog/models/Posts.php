@@ -37,6 +37,7 @@ class Posts extends \yii\db\ActiveRecord
         return [
             [['title', 'text', 'text_preview'], 'required'],
             [['text'], 'string'],
+            [['category'], 'string'],
             [['title'], 'string', 'max' => 150],
             [['text_preview'], 'string', 'max' => 250],
             //[['img'], 'file'],
@@ -53,6 +54,7 @@ class Posts extends \yii\db\ActiveRecord
             'title' => 'Title',
             'text' => 'Text',
             'text_preview' => 'Text Preview',
+            'category' => 'Category',
             'img' => 'Img',
         ];
     }
@@ -69,7 +71,7 @@ class Posts extends \yii\db\ActiveRecord
         }else{
             $this->image = UploadedFile::getInstance($this, 'img');
             if($this->image) {
-                $this->image->saveAs(substr($this->img, 1));
+                $this->img->saveAs(substr($this->img, 1));
             }
         }
 

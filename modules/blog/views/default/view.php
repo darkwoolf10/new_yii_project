@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="panel panel-default">
         <div class="panel panel-heading"><?= $model->title ?></div>
         <div class="panel-body">
-            <?= Html::decode($model->text)?>
-        </div> 
+            <?= $model->text?>
+            <code><?= $model->category ?></code> 
+        </div>
     </div>
-
 </div>
