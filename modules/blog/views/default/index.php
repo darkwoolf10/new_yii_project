@@ -6,7 +6,6 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\blog\models\PostsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
 $this->title = 'Posts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -22,13 +21,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php foreach ($posts as $arr) { ?>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?= "/basic/web" . $arr->img ?>" alt="<?= $arr->title ?>">
+                    <a href="?r=blog/default/view&id=<?=$arr->id ?>"><img src="<?= "/basic/web" . $arr->img ?>" alt="<?= $arr->title ?>"></a>
                     <div class="caption">
                         <h3><?= $arr->title ?></h3>
-                        <p><a href="?r=blog/default/view&id=<?=$arr->id ?>" class="btn btn-primary" role="button">Read</a> <a href="<?=$arr->text_preview?>" class="btn btn-default" role="button">Button</a></p>
+                        <p><a href="?r=blog/default/view&id=<?=$arr->id ?>" class="btn btn-primary" role="button"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+</a> <a href="<?=$arr->text_preview?>" class="btn btn-default" role="button"><i class="fa fa-android fa-2x" aria-hidden="true"></i>
+</a></p>
                     </div>
                 </div>
             </div>
     <?php } ?>
     </div>
 </div>
+<?= yii\widgets\LinkPager::widget([
+    'pagination' => $pages,
+]);   
+?>

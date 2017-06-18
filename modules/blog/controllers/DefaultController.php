@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\Pagination;
 
 /**
  * DefaultController implements the CRUD actions for Posts model.
@@ -47,12 +48,16 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $AllPosts = Posts::find()->all();
+        $AllPosts = Posts::find();
 
         if($AllPosts) {
-            return $this->render('index', [
-                'posts' => $AllPosts,
-            ]);
+
+            $pages = new Pagination([ 'totalCount' => $AllPosts->count(), 'pageSize' => 9 ]);
+            $posts = $AllPosts->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
+            
+            return $this->render('index', ['posts' => $posts, 'pages' => $pages]);
         }
     }
 

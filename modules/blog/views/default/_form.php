@@ -21,6 +21,7 @@ use dosamigos\ckeditor\CKEditor;
     ]) ?>
 
     <?= $form->field($model, 'text_preview')->textInput(['maxlength' => true]) ?>
+    
 
     <?= $form->field($model, 'img')->fileInput() ?>
 

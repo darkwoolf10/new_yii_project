@@ -25,15 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'title',
-            'text:ntext',
-            'text_preview',
-            'img',
-        ],
-    ]) ?>
+    <div class="panel panel-default">
+        <div class="panel panel-heading"><?= $model->title ?></div>
+        <div class="panel-body">
+            <?= Html::decode($model->text)?>
+        </div> 
+    </div>
 
 </div>

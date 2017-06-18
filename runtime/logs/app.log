@@ -7925,3 +7925,1289 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1497778394.831
     'REQUEST_TIME' => 1497778394
 ]
+2017-06-18 10:12:59 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#8 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#9 /var/www/html/basic/modules/blog/controllers/DefaultController.php(50): yii\db\ActiveQuery->all()
+#10 [internal function]: app\modules\blog\controllers\DefaultController->actionIndex()
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#14 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/in...', Array)
+#15 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#17 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(910): yii\db\Command->prepare(true)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/basic/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#6 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#7 /var/www/html/basic/modules/blog/controllers/DefaultController.php(50): yii\db\ActiveQuery->all()
+#8 [internal function]: app\modules\blog\controllers\DefaultController->actionIndex()
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#12 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/in...', Array)
+#13 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2017-06-18 10:12:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'blog/default/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"�ބ�@�mX�<]I~��o�Q9ٛ0���=\";}'
+    'PHPSESSID' => 'n6t1qetlrbeq3kivvqb1ad9r72'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog/default/view&id=8'
+    'HTTP_COOKIE' => '_csrf=5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%10%DC%DE%84%D0%40%D3mX%C9%3C%0F%5D%1FI%0C%7E%E9%0F%9Eo%0C%FEQ9%D9%9B0%EA%D9%CB%3D%22%3B%7D; PHPSESSID=n6t1qetlrbeq3kivvqb1ad9r72; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '60124'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497780779.135
+    'REQUEST_TIME' => 1497780779
+]
+2017-06-18 12:05:36 [127.0.0.1][100][n6t1qetlrbeq3kivvqb1ad9r72][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Attribute name must contain word characters only. in /var/www/html/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php:2084
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1305): yii\helpers\BaseHtml::getAttributeName('Link on Google ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1335): yii\helpers\BaseHtml::normalizeMaxLength(Object(app\modules\blog\models\Posts), 'Link on Google ...', '<span class="st...')
+#2 /var/www/html/basic/vendor/yiisoft/yii2/widgets/ActiveField.php(395): yii\helpers\BaseHtml::activeTextInput(Object(app\modules\blog\models\Posts), 'Link on Google ...', '<span class="st...')
+#3 /var/www/html/basic/modules/blog/views/default/_form.php(23): yii\widgets\ActiveField->textInput(Array)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, NULL)
+#7 /var/www/html/basic/modules/blog/views/default/create.php(18): yii\base\View->render('_form', Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\modules\blog\controllers\DefaultController))
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('create', Array, Object(app\modules\blog\controllers\DefaultController))
+#12 /var/www/html/basic/modules/blog/controllers/DefaultController.php(84): yii\base\Controller->render('create', Array)
+#13 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#14 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#17 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#18 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#20 {main}
+2017-06-18 12:05:36 [127.0.0.1][100][n6t1qetlrbeq3kivvqb1ad9r72][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_COOKIE = [
+    '_csrf' => '5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"�ބ�@�mX�<]I~��o�Q9ٛ0���=\";}'
+    'PHPSESSID' => 'n6t1qetlrbeq3kivvqb1ad9r72'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=8'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Findex'
+    'HTTP_COOKIE' => '_csrf=5cd238f39f07c4997f561219ab2b42a4cb8e5a5f080a4c7fab1b640fe369579da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%10%DC%DE%84%D0%40%D3mX%C9%3C%0F%5D%1FI%0C%7E%E9%0F%9Eo%0C%FEQ9%D9%9B0%EA%D9%CB%3D%22%3B%7D; PHPSESSID=n6t1qetlrbeq3kivvqb1ad9r72; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '60604'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'PHP_AUTH_USER' => 'root'
+    'PHP_AUTH_PW' => '12superman'
+    'REQUEST_TIME_FLOAT' => 1497787536.001
+    'REQUEST_TIME' => 1497787536
+]
+2017-06-18 12:15:57 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: posts in /var/www/html/basic/views/site/index.php:22
+Stack trace:
+#0 /var/www/html/basic/views/site/index.php(22): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/b...', 22, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/basic/controllers/SiteController.php(64): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-18 12:15:56 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'tmi5aap74bqgk3kctko11fd912'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=tmi5aap74bqgk3kctko11fd912; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '33664'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/index.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497788156.99
+    'REQUEST_TIME' => 1497788156
+]
+2017-06-18 12:17:29 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: posts in /var/www/html/basic/views/site/index.php:29
+Stack trace:
+#0 /var/www/html/basic/views/site/index.php(29): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/b...', 29, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/basic/controllers/SiteController.php(64): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-18 12:17:29 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'tmi5aap74bqgk3kctko11fd912'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=tmi5aap74bqgk3kctko11fd912; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '33700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/index.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497788249.353
+    'REQUEST_TIME' => 1497788249
+]
+2017-06-18 12:34:00 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '<', expecting end of file in /var/www/html/basic/modules/blog/views/default/index.php:9
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\modules\blog\controllers\DefaultController))
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\modules\blog\controllers\DefaultController))
+#3 /var/www/html/basic/modules/blog/controllers/DefaultController.php(54): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\modules\blog\controllers\DefaultController->actionIndex()
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog', Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2017-06-18 12:34:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'blog'
+]
+
+$_COOKIE = [
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'tmi5aap74bqgk3kctko11fd912'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=tmi5aap74bqgk3kctko11fd912; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '34444'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497789240.25
+    'REQUEST_TIME' => 1497789240
+]
+2017-06-18 13:40:30 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Use of undefined constant offset - assumed 'offset' in /var/www/html/basic/modules/blog/controllers/DefaultController.php:56
+Stack trace:
+#0 /var/www/html/basic/modules/blog/controllers/DefaultController.php(56): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/var/www/html/b...', 56, Array)
+#1 [internal function]: app\modules\blog\controllers\DefaultController->actionIndex()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#5 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog', Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-18 13:40:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'blog'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'chumbq8lr0qhd50b6q370l9pq2'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=chumbq8lr0qhd50b6q370l9pq2; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '37380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497793230.487
+    'REQUEST_TIME' => 1497793230
+]
+2017-06-18 14:05:40 [127.0.0.1][100][chumbq8lr0qhd50b6q370l9pq2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: blog/default/view?id=10 in /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php:127
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view?id=10', Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/vi...', Array)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-18 14:05:40 [127.0.0.1][100][chumbq8lr0qhd50b6q370l9pq2][info][application] $_GET = [
+    'r' => 'blog/default/view?id=10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'chumbq8lr0qhd50b6q370l9pq2'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    '__captcha/site/captcha' => 'yeyemah'
+    '__captcha/site/captchacount' => 1
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Findex'
+    'HTTP_COOKIE' => 'PHPSESSID=chumbq8lr0qhd50b6q370l9pq2; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '37960'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog/default/view?id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog/default/view?id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497794740.791
+    'REQUEST_TIME' => 1497794740
+]
+2017-06-18 14:06:17 [127.0.0.1][-][g7famgd3mdap0sc5mg59j6dmo3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: blog/default/view@id=10 in /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php:127
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view@id=10', Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/vi...', Array)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-18 14:06:17 [127.0.0.1][-][g7famgd3mdap0sc5mg59j6dmo3][info][application] $_GET = [
+    'r' => 'blog/default/view@id=10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'g7famgd3mdap0sc5mg59j6dmo3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=g7famgd3mdap0sc5mg59j6dmo3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '37980'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog/default/view@id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog/default/view@id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497794777.938
+    'REQUEST_TIME' => 1497794777
+]
+2017-06-18 14:09:31 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null in /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+The SQL being executed was: UPDATE `posts` SET `text`='<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>\r\n', `img`=NULL WHERE `id`=10 in /var/www/html/basic/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `posts` ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'img' cannot be null
+)
+
+2017-06-18 14:09:31 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/update'
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf' => 'gNs1NxJqmGp-iXn3dt0b5wy_jBt8nv0W4FDxllW4a3XVDaDwV-wu-VawFOrcYQr1xXbomAqsHsRxVIoS3QUTiA=='
+    'Posts' => [
+        'title' => 'Asking Alexandria - The Black'
+        'text' => '<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>
+'
+        'text_preview' => 'https://play.google.com/store/music/album/Asking_Alexandria_The_Black?id=B63sqx4qiipirijwkifwkmftmym'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => ''
+        ]
+        'type' => [
+            'img' => ''
+        ]
+        'tmp_name' => [
+            'img' => ''
+        ]
+        'error' => [
+            'img' => 4
+        ]
+        'size' => [
+            'img' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------584303748921285881516855574'
+    'CONTENT_LENGTH' => '1442'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38044'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fupdate&id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497794971.211
+    'REQUEST_TIME' => 1497794971
+]
+2017-06-18 14:09:45 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null in /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+The SQL being executed was: UPDATE `posts` SET `text`='<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>\r\n', `img`=NULL WHERE `id`=10 in /var/www/html/basic/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `posts` ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'img' cannot be null
+)
+
+2017-06-18 14:09:45 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/update'
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf' => 'ZR6dudgylj4HYUUhpuzBmGnG_am_VqVv85F1QLGjZHQwyAh-nbQgrS9YKDwMUNCKoA-ZKslkRr1ilQ7EOR4ciQ=='
+    'Posts' => [
+        'title' => 'Asking Alexandria - The Black'
+        'text' => '<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>
+'
+        'text_preview' => 'https://play.google.com/store/music/album/Asking_Alexandria_The_Black?id=B63sqx4qiipirijwkifwkmftmym'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => ''
+        ]
+        'type' => [
+            'img' => ''
+        ]
+        'tmp_name' => [
+            'img' => ''
+        ]
+        'error' => [
+            'img' => 4
+        ]
+        'size' => [
+            'img' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------8255126812059782278332518752'
+    'CONTENT_LENGTH' => '1449'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38052'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fupdate&id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497794985.481
+    'REQUEST_TIME' => 1497794985
+]
+2017-06-18 14:09:59 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null in /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+The SQL being executed was: UPDATE `posts` SET `text`='<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>\r\n', `img`=NULL WHERE `id`=10 in /var/www/html/basic/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `posts` ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'img' cannot be null
+)
+
+2017-06-18 14:09:59 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/update'
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf' => 'Ky0djGgNRJInpkcbgTUlJKzDBbP6lMHtbOw596R40NB--4hLLYvyAQ-fKgYriTQ2ZQphMIymIj_96EJzLMWoLQ=='
+    'Posts' => [
+        'title' => 'Asking Alexandria - The Black'
+        'text' => '<p>The Black &mdash; четвёртый студийный альбом британской пост-хардкор группы Asking Alexandria, который вышел 25 марта 2016 года. Это единственный альбом с вокалистом Денисом Шафоростовым, заменившим оригинального вокалиста группы Дэнни Уорснопа</p>
+'
+        'text_preview' => 'https://play.google.com/store/music/album/Asking_Alexandria_The_Black?id=B63sqx4qiipirijwkifwkmftmym'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => ''
+        ]
+        'type' => [
+            'img' => ''
+        ]
+        'tmp_name' => [
+            'img' => ''
+        ]
+        'error' => [
+            'img' => 4
+        ]
+        'size' => [
+            'img' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------91764127014291542041426418795'
+    'CONTENT_LENGTH' => '1456'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38058'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fupdate&id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497794999.495
+    'REQUEST_TIME' => 1497794999
+]
+2017-06-18 14:14:35 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null in /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('21')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+The SQL being executed was: UPDATE `posts` SET `img`=NULL WHERE `id`=21 in /var/www/html/basic/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `posts` ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('21')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'img' cannot be null
+)
+
+2017-06-18 14:14:35 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/update'
+    'id' => '21'
+]
+
+$_POST = [
+    '_csrf' => 'MOPq5wtqByjI413cy8gk440vPm2E8wt7gurXPCudOktlNX8gTuyxu-DaMMFhdDXxROZa7vLB6KkT7qy4oyBCtg=='
+    'Posts' => [
+        'title' => 'Варкрафт'
+        'text' => '<p>Мирный Азерот на грани войны: цивилизации угрожает раса свирепых воинов-орков, покидающих умирающий Дренор, чтобы с оружием в руках обрести новый дом.Темный портал соединил два мира, в результате чего одну армию ждет уничтожение, а вторую &ndash; вымирание.Два великих героя сражаются по разные стороны конфликта, и когда они сойдутся на поле брани, от результата этой схватки будет зависеть слишком многое...Перед вами официальная новеллизация самого ожидаемого блокбастера 2016 года от Legendary Pictures и Universal Pictures, основанного на глобальном феномене компании Blizzard Entertainment, имя которому &ndash; ВАРКРАФТ. Читай книгу &ndash; смотри фильм!</p>
+'
+        'text_preview' => 'https://play.google.com/store/books/details/%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8_%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD_%D0%92%D0%B0%D1%80%D0%BA%D1%80%D0%B0%D1%84%D1%82?id=QRA_DAAAQBAJ'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => ''
+        ]
+        'type' => [
+            'img' => ''
+        ]
+        'tmp_name' => [
+            'img' => ''
+        ]
+        'error' => [
+            'img' => 4
+        ]
+        'size' => [
+            'img' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------19558813311087390304142793025'
+    'CONTENT_LENGTH' => '2245'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=21'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38202'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fupdate&id=21'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=21'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497795275.753
+    'REQUEST_TIME' => 1497795275
+]
+2017-06-18 14:14:47 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null in /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php:842
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(842): PDOStatement->execute()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('21')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+The SQL being executed was: UPDATE `posts` SET `img`=NULL WHERE `id`=21 in /var/www/html/basic/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `posts` ...')
+#1 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(227): yii\db\Command->execute()
+#2 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(774): yii\db\ActiveRecord::updateAll(Array, Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(104): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionUpdate('21')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/up...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'img' cannot be null
+)
+
+2017-06-18 14:14:47 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/update'
+    'id' => '21'
+]
+
+$_POST = [
+    '_csrf' => 'k8jQ8snvcH5GmdRacLy9VTUEBVBGxtdFTa8JdnkYd7LGHkU1jGnG7W6guUfaAKxH_M1h0zD0NJfcq3Ly8aUPTw=='
+    'Posts' => [
+        'title' => 'Варкрафт'
+        'text' => '<p>Мирный Азерот на грани войны: цивилизации угрожает раса свирепых воинов-орков, покидающих умирающий Дренор, чтобы с оружием в руках обрести новый дом.Темный портал соединил два мира, в результате чего одну армию ждет уничтожение, а вторую &ndash; вымирание.Два великих героя сражаются по разные стороны конфликта, и когда они сойдутся на поле брани, от результата этой схватки будет зависеть слишком многое...Перед вами официальная новеллизация самого ожидаемого блокбастера 2016 года от Legendary Pictures и Universal Pictures, основанного на глобальном феномене компании Blizzard Entertainment, имя которому &ndash; ВАРКРАФТ. Читай книгу &ndash; смотри фильм!</p>
+'
+        'text_preview' => 'https://play.google.com/store/books/details/%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8_%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD_%D0%92%D0%B0%D1%80%D0%BA%D1%80%D0%B0%D1%84%D1%82?id=QRA_DAAAQBAJ'
+        'img' => ''
+    ]
+]
+
+$_FILES = [
+    'Posts' => [
+        'name' => [
+            'img' => ''
+        ]
+        'type' => [
+            'img' => ''
+        ]
+        'tmp_name' => [
+            'img' => ''
+        ]
+        'error' => [
+            'img' => 4
+        ]
+        'size' => [
+            'img' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------25162627214697240301170617351'
+    'CONTENT_LENGTH' => '2245'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=21'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38206'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fupdate&id=21'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=21'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497795287.367
+    'REQUEST_TIME' => 1497795287
+]
+2017-06-18 14:22:22 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: title in /var/www/html/basic/modules/blog/views/default/view.php:29
+Stack trace:
+#0 /var/www/html/basic/modules/blog/views/default/view.php(29): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/b...', 29, Array)
+#1 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#3 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\modules\blog\controllers\DefaultController))
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(app\modules\blog\controllers\DefaultController))
+#5 /var/www/html/basic/modules/blog/controllers/DefaultController.php(72): yii\base\Controller->render('view', Array)
+#6 [internal function]: app\modules\blog\controllers\DefaultController->actionView('10')
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#10 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/vi...', Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-18 14:22:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'blog/default/view'
+    'id' => '10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Findex'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '38312'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog/default/view&id=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog/default/view&id=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497795742.771
+    'REQUEST_TIME' => 1497795742
+]
+2017-06-18 14:53:04 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][error][Error] Error: Class 'ArrayHelper' not found in /var/www/html/basic/modules/blog/views/default/_form.php:25
+Stack trace:
+#0 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#2 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, NULL)
+#3 /var/www/html/basic/modules/blog/views/default/create.php(18): yii\base\View->render('_form', Array)
+#4 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/b...')
+#5 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#6 /var/www/html/basic/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\modules\blog\controllers\DefaultController))
+#7 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('create', Array, Object(app\modules\blog\controllers\DefaultController))
+#8 /var/www/html/basic/modules/blog/controllers/DefaultController.php(89): yii\base\Controller->render('create', Array)
+#9 [internal function]: app\modules\blog\controllers\DefaultController->actionCreate()
+#10 /var/www/html/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/basic/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/basic/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#13 /var/www/html/basic/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('blog/default/cr...', Array)
+#14 /var/www/html/basic/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/basic/web/index.php(12): yii\base\Application->run()
+#16 {main}
+2017-06-18 14:53:04 [127.0.0.1][100][3bvr4opfcahir8gue1j471e7j3][info][application] $_GET = [
+    'r' => 'blog/default/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '3bvr4opfcahir8gue1j471e7j3'
+    '_csrf' => '3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"U֕�E���(9m����d�v2�ґ{���x�\";}'
+    '_identity' => '559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/basic/web/index.php?r=blog%2Fdefault%2Fupdate&id=10'
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/basic/web/index.php?r=blog%2Fdefault%2Findex'
+    'HTTP_COOKIE' => 'PHPSESSID=3bvr4opfcahir8gue1j471e7j3; _csrf=3c1e3a154cb3245ee5a708d9e58c0eb6f2843119f23308ac17583014beb04858a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22U%D6%95%C7E%86%B6%93%289m%1D%AA%BC%11%12%C9%C9d%83v2%E3%D2%91%04%7B%84%88%BDx%FD%22%3B%7D; _identity=559a4fb7a339483e2acd3170635341440fc2a1ed4280a7f09a772b04da03e4c8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/basic/web/index.php'
+    'REMOTE_PORT' => '39074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=blog%2Fdefault%2Fcreate'
+    'REQUEST_URI' => '/basic/web/index.php?r=blog%2Fdefault%2Fcreate'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1497797584.041
+    'REQUEST_TIME' => 1497797584
+]
