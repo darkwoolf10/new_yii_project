@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="posts-index">
 
-    <h1>Знижки</h1>
+    <h1>Discounts</h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>

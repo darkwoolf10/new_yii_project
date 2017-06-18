@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Sails Time';
+$this->title = 'Time of discounts';
 ?>
 <div class="site-index">
 
@@ -11,7 +11,7 @@ $this->title = 'Sails Time';
 
         <p class="lead">I write service on Yii2 framework.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://localhost/basic/web?r=blog">Page with sails</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://localhost/basic/web?r=blog">Time of discounts</a></p>
     </div>
 
     <div class="body-content">
